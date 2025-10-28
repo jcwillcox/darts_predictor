@@ -1,1 +1,6 @@
 streamlit>=1.26.0
+requests
+bs4
+random
+json
+pandas
