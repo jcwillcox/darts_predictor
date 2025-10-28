@@ -1,13 +1,9 @@
-# 📦 Streamlit App Starter Kit 
+# Darts Match Predictor
 ```
 ⬆️ (Replace above with your app's name)
 ```
 
-Description of the app ...
-
-## Demo App
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+This code simulates a match between two players given parameters by pulling stats from dartsorakel.com, and using their stats simulates however many darts matches between those players you want, and shows the results (Assumes both players throw first 50% of the time)
 
 ## GitHub Codespaces
 
