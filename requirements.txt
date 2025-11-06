@@ -1,6 +1,4 @@
 streamlit>=1.26.0
 requests
-bs4
-random
-json
+beautifulsoup4
 pandas
