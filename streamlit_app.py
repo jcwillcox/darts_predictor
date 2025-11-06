@@ -15,6 +15,7 @@ with st.form("simulation_form"):
     sets = st.number_input("Sets To Win", min_value=1, value=1)
     legs = st.number_input("Legs To Win A Set", min_value=1, value=1)
     simulations = st.number_input("Number of Simulations", min_value=0, max_value=100000, value=100000)
+    code = st.text_input("Password to have this match auto-log itself to the database", "")
     submitted = st.form_submit_button("Run Simulation")
     if submitted:
         outcome, results, winpct1, winpct2 = simulator(name1, name2, sets1, sets2, sets, legs, simulations)
@@ -30,3 +31,7 @@ with st.form("simulation_form"):
             st.write(f"Win Percentage for {name2}: {winpct2:.3f}%")
             st.write(f"Decimal odds & moneyline for {name1} = {win_pct_to_moneyline(winpct1)}")
             st.write(f"Decimal odds & moneyline for {name2} = {win_pct_to_moneyline(winpct2)}")
+
+    #integrate google sheet
+    if code.upper() == "MVG":
+        st.success("password correct")
