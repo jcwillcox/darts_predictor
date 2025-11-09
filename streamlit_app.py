@@ -20,7 +20,7 @@ with st.form("simulation_form"):
     betodds1 = st.number_input("Player 1 Betting Decimal Win Odds:", min_value=1.00, step = 0.01, value = 2.0)
     betodds2 = st.number_input("Player 2 Betting Decimal Win Odds:", min_value=1.00, step = 0.01, value = 2.0)
     betway_odds_series = st.text_input("Exact Score Decimal Odds, in order from most dominant player 1 win to most dominant player 2 win:", "")
-    code = st.text_input("Password:", "")
+    code = st.text_input("Password:", "", type="password", autocomplete="off")
     submitted = st.form_submit_button("Run Simulation")
     if submitted:
         outcome, results, winpct1, winpct2 = simulator(name1, name2, sets1, sets2, sets, legs, simulations)
